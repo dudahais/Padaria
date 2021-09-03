@@ -1,0 +1,14 @@
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\bin\Debug\Ibread.exe.config
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\bin\Debug\Ibread.exe
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\bin\Debug\Ibread.pdb
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.Form1.resources
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.Home.resources
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.Properties.Resources.resources
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.csproj.GenerateResource.cache
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.csproj.CoreCompileInputs.cache
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.exe
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.pdb
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.Cadastro.resources
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.Login.resources
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.Pedido.resources
+C:\Users\Wesley Lindão\source\repos\Ibread\Ibread\obj\Debug\Ibread.Hora.resources
