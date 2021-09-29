@@ -39,16 +39,16 @@ namespace Ibread
             this.lCPF = new System.Windows.Forms.Label();
             this.lPaes = new System.Windows.Forms.Label();
             this.tbCPF = new System.Windows.Forms.TextBox();
+            this.tbPaes = new System.Windows.Forms.TextBox();
+            this.bInserir = new System.Windows.Forms.Button();
+            this.lID = new System.Windows.Forms.Label();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.bLimpar = new System.Windows.Forms.Button();
             this.cliente_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente_paes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbPaes = new System.Windows.Forms.TextBox();
-            this.bInserir = new System.Windows.Forms.Button();
-            this.bApagar = new System.Windows.Forms.Button();
-            this.lID = new System.Windows.Forms.Label();
-            this.tbID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +56,16 @@ namespace Ibread
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 59.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Daybury", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.textBox1.Location = new System.Drawing.Point(42, 5);
+            this.textBox1.Location = new System.Drawing.Point(31, 3);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(783, 135);
+            this.textBox1.Size = new System.Drawing.Size(1175, 257);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Pedidos!";
+            this.textBox1.Text = "Vendas!";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -75,18 +76,18 @@ namespace Ibread
             this.cliente_cpf,
             this.cliente_telefone,
             this.cliente_paes});
-            this.dataGridView1.Location = new System.Drawing.Point(163, 423);
+            this.dataGridView1.Location = new System.Drawing.Point(134, 419);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(818, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(997, 420);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lNome
             // 
             this.lNome.AutoSize = true;
-            this.lNome.Location = new System.Drawing.Point(53, 181);
+            this.lNome.Location = new System.Drawing.Point(150, 181);
             this.lNome.Name = "lNome";
             this.lNome.Size = new System.Drawing.Size(55, 20);
             this.lNome.TabIndex = 6;
@@ -95,7 +96,7 @@ namespace Ibread
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(110, 181);
+            this.tbNome.Location = new System.Drawing.Point(207, 181);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(408, 26);
             this.tbNome.TabIndex = 7;
@@ -104,7 +105,7 @@ namespace Ibread
             // lTelefone
             // 
             this.lTelefone.AutoSize = true;
-            this.lTelefone.Location = new System.Drawing.Point(542, 184);
+            this.lTelefone.Location = new System.Drawing.Point(130, 244);
             this.lTelefone.Name = "lTelefone";
             this.lTelefone.Size = new System.Drawing.Size(75, 20);
             this.lTelefone.TabIndex = 8;
@@ -112,7 +113,7 @@ namespace Ibread
             // 
             // tbTelefone
             // 
-            this.tbTelefone.Location = new System.Drawing.Point(624, 181);
+            this.tbTelefone.Location = new System.Drawing.Point(207, 244);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(408, 26);
             this.tbTelefone.TabIndex = 9;
@@ -120,7 +121,7 @@ namespace Ibread
             // lCPF
             // 
             this.lCPF.AutoSize = true;
-            this.lCPF.Location = new System.Drawing.Point(57, 250);
+            this.lCPF.Location = new System.Drawing.Point(734, 181);
             this.lCPF.Name = "lCPF";
             this.lCPF.Size = new System.Drawing.Size(40, 20);
             this.lCPF.TabIndex = 10;
@@ -130,7 +131,7 @@ namespace Ibread
             // lPaes
             // 
             this.lPaes.AutoSize = true;
-            this.lPaes.Location = new System.Drawing.Point(533, 247);
+            this.lPaes.Location = new System.Drawing.Point(630, 247);
             this.lPaes.Name = "lPaes";
             this.lPaes.Size = new System.Drawing.Size(157, 20);
             this.lPaes.TabIndex = 11;
@@ -139,57 +140,25 @@ namespace Ibread
             // 
             // tbCPF
             // 
-            this.tbCPF.Location = new System.Drawing.Point(110, 247);
+            this.tbCPF.Location = new System.Drawing.Point(793, 175);
             this.tbCPF.Name = "tbCPF";
-            this.tbCPF.Size = new System.Drawing.Size(408, 26);
+            this.tbCPF.Size = new System.Drawing.Size(310, 26);
             this.tbCPF.TabIndex = 12;
             this.tbCPF.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // cliente_id
-            // 
-            this.cliente_id.HeaderText = "ID";
-            this.cliente_id.MinimumWidth = 8;
-            this.cliente_id.Name = "cliente_id";
-            this.cliente_id.Width = 150;
-            // 
-            // cliente_nome
-            // 
-            this.cliente_nome.HeaderText = "Nome";
-            this.cliente_nome.MinimumWidth = 8;
-            this.cliente_nome.Name = "cliente_nome";
-            this.cliente_nome.Width = 150;
-            // 
-            // cliente_cpf
-            // 
-            this.cliente_cpf.HeaderText = "CPF";
-            this.cliente_cpf.MinimumWidth = 8;
-            this.cliente_cpf.Name = "cliente_cpf";
-            this.cliente_cpf.Width = 150;
-            // 
-            // cliente_telefone
-            // 
-            this.cliente_telefone.HeaderText = "Telefone";
-            this.cliente_telefone.MinimumWidth = 8;
-            this.cliente_telefone.Name = "cliente_telefone";
-            this.cliente_telefone.Width = 150;
-            // 
-            // cliente_paes
-            // 
-            this.cliente_paes.HeaderText = "Quantidade de pães";
-            this.cliente_paes.MinimumWidth = 8;
-            this.cliente_paes.Name = "cliente_paes";
-            this.cliente_paes.Width = 150;
-            // 
             // tbPaes
             // 
-            this.tbPaes.Location = new System.Drawing.Point(696, 244);
+            this.tbPaes.Location = new System.Drawing.Point(793, 244);
             this.tbPaes.Name = "tbPaes";
-            this.tbPaes.Size = new System.Drawing.Size(336, 26);
+            this.tbPaes.Size = new System.Drawing.Size(113, 26);
             this.tbPaes.TabIndex = 13;
             // 
             // bInserir
             // 
-            this.bInserir.Location = new System.Drawing.Point(49, 328);
+            this.bInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bInserir.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.bInserir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.bInserir.Location = new System.Drawing.Point(154, 326);
             this.bInserir.Name = "bInserir";
             this.bInserir.Size = new System.Drawing.Size(194, 45);
             this.bInserir.TabIndex = 14;
@@ -197,20 +166,10 @@ namespace Ibread
             this.bInserir.UseVisualStyleBackColor = true;
             this.bInserir.Click += new System.EventHandler(this.bInserir_Click);
             // 
-            // bApagar
-            // 
-            this.bApagar.Location = new System.Drawing.Point(263, 328);
-            this.bApagar.Name = "bApagar";
-            this.bApagar.Size = new System.Drawing.Size(238, 47);
-            this.bApagar.TabIndex = 15;
-            this.bApagar.Text = "Apagar";
-            this.bApagar.UseVisualStyleBackColor = true;
-            this.bApagar.Click += new System.EventHandler(this.bApagar_Click);
-            // 
             // lID
             // 
             this.lID.AutoSize = true;
-            this.lID.Location = new System.Drawing.Point(53, 137);
+            this.lID.Location = new System.Drawing.Point(150, 137);
             this.lID.Name = "lID";
             this.lID.Size = new System.Drawing.Size(26, 20);
             this.lID.TabIndex = 16;
@@ -219,20 +178,69 @@ namespace Ibread
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(110, 134);
+            this.tbID.Location = new System.Drawing.Point(207, 134);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(79, 26);
             this.tbID.TabIndex = 17;
             this.tbID.Visible = false;
+            // 
+            // bLimpar
+            // 
+            this.bLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bLimpar.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.bLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
+            this.bLimpar.Location = new System.Drawing.Point(366, 326);
+            this.bLimpar.Name = "bLimpar";
+            this.bLimpar.Size = new System.Drawing.Size(194, 45);
+            this.bLimpar.TabIndex = 18;
+            this.bLimpar.Text = "Limpar";
+            this.bLimpar.UseVisualStyleBackColor = true;
+            this.bLimpar.Click += new System.EventHandler(this.bLimpar_Click_1);
+            // 
+            // cliente_id
+            // 
+            this.cliente_id.FillWeight = 12F;
+            this.cliente_id.HeaderText = "ID";
+            this.cliente_id.MinimumWidth = 8;
+            this.cliente_id.Name = "cliente_id";
+            this.cliente_id.Width = 30;
+            // 
+            // cliente_nome
+            // 
+            this.cliente_nome.HeaderText = "Nome";
+            this.cliente_nome.MinimumWidth = 8;
+            this.cliente_nome.Name = "cliente_nome";
+            this.cliente_nome.Width = 160;
+            // 
+            // cliente_cpf
+            // 
+            this.cliente_cpf.HeaderText = "CPF";
+            this.cliente_cpf.MinimumWidth = 8;
+            this.cliente_cpf.Name = "cliente_cpf";
+            this.cliente_cpf.Width = 140;
+            // 
+            // cliente_telefone
+            // 
+            this.cliente_telefone.HeaderText = "Telefone";
+            this.cliente_telefone.MinimumWidth = 8;
+            this.cliente_telefone.Name = "cliente_telefone";
+            this.cliente_telefone.Width = 140;
+            // 
+            // cliente_paes
+            // 
+            this.cliente_paes.HeaderText = "Quantidade de pães";
+            this.cliente_paes.MinimumWidth = 8;
+            this.cliente_paes.Name = "cliente_paes";
+            this.cliente_paes.Width = 130;
             // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
+            this.Controls.Add(this.bLimpar);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.lID);
-            this.Controls.Add(this.bApagar);
             this.Controls.Add(this.bInserir);
             this.Controls.Add(this.tbPaes);
             this.Controls.Add(this.tbCPF);
@@ -266,15 +274,15 @@ namespace Ibread
         private System.Windows.Forms.Label lCPF;
         private System.Windows.Forms.Label lPaes;
         private System.Windows.Forms.TextBox tbCPF;
+        private System.Windows.Forms.TextBox tbPaes;
+        private System.Windows.Forms.Button bInserir;
+        private System.Windows.Forms.Label lID;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.Button bLimpar;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente_nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente_cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente_telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente_paes;
-        private System.Windows.Forms.TextBox tbPaes;
-        private System.Windows.Forms.Button bInserir;
-        private System.Windows.Forms.Button bApagar;
-        private System.Windows.Forms.Label lID;
-        private System.Windows.Forms.TextBox tbID;
     }
 }

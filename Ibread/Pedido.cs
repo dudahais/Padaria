@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace Ibread
 {
     public partial class Pedido : UserControl
@@ -18,6 +19,7 @@ namespace Ibread
             InitializeComponent();
         }
 
+       
         private MySqlConnectionStringBuilder conexaoBanco()
         {
             MySqlConnectionStringBuilder conexaoBD = new MySqlConnectionStringBuilder();
@@ -44,7 +46,7 @@ namespace Ibread
                 realizaConexacoBD.Open();
 
                 MySqlCommand comandoMySql = realizaConexacoBD.CreateCommand();
-                comandoMySql.CommandText = "SELECT * FROM ibread WHERE ativoIbread = 1";
+                comandoMySql.CommandText = "SELECT * FROM ibread";
                 MySqlDataReader reader = comandoMySql.ExecuteReader();
 
                 dataGridView1.Rows.Clear();
@@ -87,20 +89,6 @@ namespace Ibread
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                dataGridView1.CurrentRow.Selected = true;
-                //preenche os textbox com as células da linha selecionada
-                tbNome.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_nome"].FormattedValue.ToString();
-                tbCPF.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_cpf"].FormattedValue.ToString();
-                tbTelefone.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_telefone"].FormattedValue.ToString();
-                tbPaes.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_paes"].FormattedValue.ToString();
-
-
-            }
-        }
 
         private void tbNome_TextChanged(object sender, EventArgs e)
         {
@@ -117,12 +105,11 @@ namespace Ibread
 
         }
 
-        private void btLimpar_Click(object sender, EventArgs e)
+        private void bLimpar_Click_1(object sender, EventArgs e)
         {
             limparCampos();
-
         }
-
+ 
         private void limparCampos()
         {
             tbNome.Clear();
@@ -160,38 +147,57 @@ namespace Ibread
             }
         }
 
-        private void bApagar_Click(object sender, EventArgs e)
-        {
-            {
-                MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
-                MySqlConnection realizaConexacoBD = new MySqlConnection(conexaoBD.ToString());
-                try
-                {
-                    realizaConexacoBD.Open(); //Abre a conexão com o banco
-
-                    MySqlCommand comandoMySql = realizaConexacoBD.CreateCommand(); //Crio um comando SQL
-                                                                                   // "DELETE FROM filme WHERE idFilme = "+ textBoxId.Text +""
-                                                                                   //comandoMySql.CommandText = "DELETE FROM filme WHERE idFilme = " + tbID.Text + "";
-                    comandoMySql.CommandText = "UPDATE ibread SET ativoIbread = 0 WHERE cliente_id = " + tbID.Text + "";
-
-                    comandoMySql.ExecuteNonQuery();
-
-                    realizaConexacoBD.Close(); // Fecho a conexão com o banco
-                    MessageBox.Show("Deletado com sucesso"); //Exibo mensagem de aviso
-                    atualizaGrid();
-                    limparCampos();
-                }
-                catch (Exception ex)
-                {
-                    //MessageBox.Show("Não foi possivel abrir a conexão! ");
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
-
         private void Pedido_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bAlterar_Click(object sender, EventArgs e)
+        {
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
+            MySqlConnection realizaConexacoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
+                realizaConexacoBD.Open(); //Abre a conexão com o banco
+
+                MySqlCommand comandoMySql = realizaConexacoBD.CreateCommand(); //Crio um comando SQL
+                comandoMySql.CommandText = "UPDATE ibread SET cliente_nome = '" + tbNome.Text + "', " +
+                    "cliente_CPF = '" + tbCPF.Text + "', " +
+                    "cliente_telefone = '" + tbTelefone.Text + "', " +
+                    "cliente_paes = " + tbPaes.Text +
+                    " WHERE tbID = " + tbID.Text + "";
+                comandoMySql.ExecuteNonQuery();
+
+                realizaConexacoBD.Close(); // Fecho a conexão com o banco
+                MessageBox.Show("Atualizado com sucesso"); //Exibo mensagem de aviso
+                atualizaGrid();
+                limparCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possivel alterar o item, tente novamente! ");
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                //preenche os textbox com as células da linha selecionada
+                tbNome.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_nome"].FormattedValue.ToString();
+                tbCPF.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_cpf"].FormattedValue.ToString();
+                tbTelefone.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_telefone"].FormattedValue.ToString();
+                tbPaes.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente_paes"].FormattedValue.ToString();
+
+
+            }
         }
     }
 }

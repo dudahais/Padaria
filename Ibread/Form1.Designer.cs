@@ -38,11 +38,11 @@ namespace Ibread
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.inicio1 = new Ibread.Home();
+            this.cadastro1 = new Ibread.Cadastro();
             this.pedido1 = new Ibread.Pedido();
             this.login1 = new Ibread.Login();
             this.hora1 = new Ibread.Hora();
-            this.inicio1 = new Ibread.Home();
-            this.cadastro1 = new Ibread.Cadastro();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,10 +55,11 @@ namespace Ibread
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 87);
+            this.button1.Location = new System.Drawing.Point(0, 134);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(169, 33);
+            this.button1.Size = new System.Drawing.Size(254, 51);
             this.button1.TabIndex = 1;
             this.button1.Text = "    Início";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -67,16 +68,18 @@ namespace Ibread
             // 
             // button4
             // 
+            this.button4.AutoSize = true;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(4, 456);
+            this.button4.Location = new System.Drawing.Point(6, 534);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(169, 42);
+            this.button4.Size = new System.Drawing.Size(254, 65);
             this.button4.TabIndex = 2;
             this.button4.Text = "    Horários";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -91,12 +94,13 @@ namespace Ibread
             this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(2, 578);
+            this.button5.Location = new System.Drawing.Point(3, 683);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(169, 48);
+            this.button5.Size = new System.Drawing.Size(254, 74);
             this.button5.TabIndex = 3;
-            this.button5.Text = "    Pedidos";
+            this.button5.Text = "    Vendas";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -104,9 +108,10 @@ namespace Ibread
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(45)))));
-            this.SidePanel.Location = new System.Drawing.Point(0, 78);
+            this.SidePanel.Location = new System.Drawing.Point(0, 120);
+            this.SidePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(10, 51);
+            this.SidePanel.Size = new System.Drawing.Size(15, 78);
             this.SidePanel.TabIndex = 2;
             // 
             // button3
@@ -117,10 +122,11 @@ namespace Ibread
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(12, 332);
+            this.button3.Location = new System.Drawing.Point(18, 393);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(144, 42);
+            this.button3.Size = new System.Drawing.Size(216, 65);
             this.button3.TabIndex = 4;
             this.button3.Text = "    Cadastro";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -135,10 +141,11 @@ namespace Ibread
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(12, 216);
+            this.button2.Location = new System.Drawing.Point(18, 258);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(149, 42);
+            this.button2.Size = new System.Drawing.Size(224, 65);
             this.button2.TabIndex = 5;
             this.button2.Text = "    Login";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -156,66 +163,74 @@ namespace Ibread
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(176, 700);
+            this.panel1.Size = new System.Drawing.Size(264, 1077);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1131, -11);
+            this.pictureBox1.Location = new System.Drawing.Point(1696, -17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(74, 86);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // pedido1
-            // 
-            this.pedido1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.pedido1.Location = new System.Drawing.Point(172, 0);
-            this.pedido1.Name = "pedido1";
-            this.pedido1.Size = new System.Drawing.Size(955, 700);
-            this.pedido1.TabIndex = 5;
-            // 
-            // login1
-            // 
-            this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.login1.Location = new System.Drawing.Point(172, 0);
-            this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(955, 700);
-            this.login1.TabIndex = 4;
-            // 
-            // hora1
-            // 
-            this.hora1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.hora1.Location = new System.Drawing.Point(172, 0);
-            this.hora1.Name = "hora1";
-            this.hora1.Size = new System.Drawing.Size(955, 700);
-            this.hora1.TabIndex = 3;
-            // 
             // inicio1
             // 
+            this.inicio1.AutoSize = true;
             this.inicio1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.inicio1.Location = new System.Drawing.Point(176, 0);
+            this.inicio1.Location = new System.Drawing.Point(262, 8);
+            this.inicio1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.inicio1.Name = "inicio1";
-            this.inicio1.Size = new System.Drawing.Size(955, 700);
+            this.inicio1.Size = new System.Drawing.Size(1432, 1077);
             this.inicio1.TabIndex = 2;
             // 
             // cadastro1
             // 
             this.cadastro1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.cadastro1.Location = new System.Drawing.Point(175, 0);
+            this.cadastro1.Location = new System.Drawing.Point(262, 0);
+            this.cadastro1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cadastro1.Name = "cadastro1";
-            this.cadastro1.Size = new System.Drawing.Size(955, 700);
+            this.cadastro1.Size = new System.Drawing.Size(1432, 1077);
             this.cadastro1.TabIndex = 1;
+            // 
+            // pedido1
+            // 
+            this.pedido1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
+            this.pedido1.Location = new System.Drawing.Point(258, 0);
+            this.pedido1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.pedido1.Name = "pedido1";
+            this.pedido1.Size = new System.Drawing.Size(1432, 1077);
+            this.pedido1.TabIndex = 5;
+            // 
+            // login1
+            // 
+            this.login1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
+            this.login1.Location = new System.Drawing.Point(258, 0);
+            this.login1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(1432, 1077);
+            this.login1.TabIndex = 4;
+            // 
+            // hora1
+            // 
+            this.hora1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
+            this.hora1.Location = new System.Drawing.Point(258, 0);
+            this.hora1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.hora1.Name = "hora1";
+            this.hora1.Size = new System.Drawing.Size(1432, 1077);
+            this.hora1.TabIndex = 3;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1175, 700);
+            this.ClientSize = new System.Drawing.Size(1762, 1077);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.inicio1);
@@ -224,12 +239,15 @@ namespace Ibread
             this.Controls.Add(this.login1);
             this.Controls.Add(this.hora1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
